@@ -9,3 +9,9 @@
 #o 2 - R$ 3.98
 #o ...
 #o 50 - R$ 99.50
+
+qnt=int(input("Quantos produtos tem na caixa? "))
+
+valor=qnt*1.99
+
+print(f"\nValor das compras eh R${valor} reais")
