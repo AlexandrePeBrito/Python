@@ -1,10 +1,3 @@
-teste=[]
+teste={1:10,2:20,3:30,5:0}
 
-teste.append(1)
-teste.append(2)
-teste.append(3)
-
-print(teste)
-
-teste[0]=5
-print(teste)
+print(teste[2])
