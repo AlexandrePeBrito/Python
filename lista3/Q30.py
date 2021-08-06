@@ -8,3 +8,9 @@
 #o 2 - R$ 0.36
 #o ...
 #o 50 - R$ 9.00
+
+valor=float(input("Informe quantos Reais de pao vc deseja: "))
+
+paes=int(valor/0.18)
+
+print(f"Com R${valor} voce tera {paes} paes.")
