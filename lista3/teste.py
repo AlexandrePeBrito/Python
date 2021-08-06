@@ -1,12 +1,10 @@
-nome= input("AKI: ")
-rep=1
-while(rep==1):
-    if(nome!="M"):
-        if(nome!="F"):
-            print("Diferente")
-            nome = input("LA: ")
-            rep=1
-        else: rep=0
-    else: rep=0
+teste=[]
 
-print("igual")
+teste.append(1)
+teste.append(2)
+teste.append(3)
+
+print(teste)
+
+teste[0]=5
+print(teste)
