@@ -12,3 +12,14 @@
 ##o 5 X 6 = 30
 #o 5 X 7 = 35
 #Obs: Você deve verificar se o usuário não digitou o final menor que o inicial.
+
+num=int(input("Informe o numero que deseja saber a tabuada: "))
+comeco=int(input("Informe por qual numero a tabuada deve começar:"))
+final=int(input("Informe ate que numero a tabuada deve ir: "))
+res=0
+
+if(comeco<final):
+    for c in range(comeco,final+1):
+        res=c*num
+        print(f"{num} x {c} = {res}")
+else: print("Valores invalidos!")
