@@ -18,3 +18,21 @@
 #72.Melhor nota: 9.9
 #73.Pior nota: 7.5
 #Média: 9,04
+
+nome=input("Informe o nome do atleta: ")
+apresentacao=[]
+
+for c in range(0,7):
+    nota=float(input(f"Informe a Nota de {nome}: "))
+    apresentacao.append(nota)
+
+for c in range(0,7):
+    print(f"Nota {c+1}: {apresentacao[c]}")
+
+menor=min(apresentacao)
+maior=max(apresentacao)
+apresentacao.pop(apresentacao.index(menor))
+apresentacao.pop(apresentacao.index(maior))
+media=(sum(apresentacao)/5)
+
+print(f"\nResultado Final:\nAtleta: {nome}\nMelhor Nota: {maior}\nMenor Nota: {menor}\nMedia: {media}")
