@@ -20,3 +20,26 @@
 #58.
 #59.Resultado final:
 #Rodrigo Curvêllo: 5.9 m
+
+nome=input("Informe o nome do atleta: ")
+saltos=[]
+
+for c in range(0,5):
+    altura=float(input(f"Informe a altura do salto do {nome}: "))
+    saltos.append(altura)
+
+print(f"Primeiro Salto: {saltos[0]} M\n\
+Segundo Salto: {saltos[1]} M\n\
+Terceiro Salto: {saltos[2]} M\n\
+Quarto Salto: {saltos[3]} M\n\
+Quinto Salto: {saltos[4]} M\n")
+
+menor=min(saltos)
+maior=max(saltos)
+saltos.pop(saltos.index(menor))
+saltos.pop(saltos.index(maior))
+media=(sum(saltos)/3)
+print(f"Melhor Salto: {maior} M\n\
+Menor Salto: {menor} M\n\
+Media dos demais Saltos: {media} M\n\n\
+Resultado Final:\n{nome}: {media} M")
