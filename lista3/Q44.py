@@ -11,3 +11,45 @@
 #o A percentagem de votos nulos sobre o total de votos;
 #o A percentagem de votos em branco sobre o total de votos. Para finalizar o conjunto de
 #votos tem-se o valor zero.
+
+eleicao=[]
+eleicao.append(0)
+eleicao.append(0)
+eleicao.append(0)
+eleicao.append(0)
+eleicao.append(0)
+eleicao.append(0)
+resp=1
+v=0
+#eleicao[0] = candidato 1
+#eleicao[1] = candidato 2
+#eleicao[2] = candidato 3
+
+while(resp==1):
+    voto=int(input("Voce deseja votar em:\n1-Claudio\n2-Ana\n3-Leo\n4-Miguel\n5-Voto Nulo\n6-Voto em Branco: "))
+    v+=1
+    if(voto==1):
+        eleicao[0]=eleicao[0]+1
+    elif(voto==2):
+        eleicao[1]=eleicao[1]+1
+    elif(voto==3):
+        eleicao[2]=eleicao[2]+1
+    elif(voto==4):
+        eleicao[3]=eleicao[3]+1
+    elif(voto==5):
+        eleicao[4]=eleicao[4]+1
+    elif(voto==6):
+        eleicao[5]=eleicao[5]+1
+    resp=int(input("\nTem mais alguma pessoa para votar? 1-Sim 2-Nao "))
+
+porc_nulo=(eleicao[4]/v)*100
+porc_branco=(eleicao[5]/v)*100
+
+print(f"O candidato 1 teve {eleicao[0]} votos\n\
+O candidato 2 teve {eleicao[1]} votos\n\
+O candidato 3 teve {eleicao[2]} votos\n\
+O candidato 4 teve {eleicao[3]} votos\n\
+A eleicão teve {eleicao[4]} votos Nulos\n\
+A eleicão teve {eleicao[5]} votos Brancos\n\
+A porcentagem de Votos Nulos eh {round(porc_nulo)}%\n\
+A porcentagem de Votos Brancos eh {round(porc_branco)}%")

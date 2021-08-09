@@ -18,3 +18,26 @@
 #l. 08 - C
 #m. 09 - B
 #10 - A
+
+gabarito={1:"A",2:"C",3:"A",4:"B",5:"B",6:"C",7:"E",8:"A",9:"A",10:"C"}
+escola=[]
+a=0
+aluno=int(input("Deseja corrigir a prova do aluno? 1-Sim 2-Nao "))
+
+while(aluno==1):
+    a+=1
+    correto=0
+    for c in range(1,11):
+        resposta=input(f"\nInforme a Resposta da Questao {c}: ")
+        if(gabarito[c]==resposta):
+            correto+=1
+    escola.append(correto)
+    aluno=int(input("\nDeseja corrigir a prova do aluno? 1-Sim 2-Nao "))
+
+media=sum(escola)/a
+menor=min(escola)
+maior=max(escola)
+print(f"\nO numero total de alunos que usaram o APP foi {a}.\n\
+A menor nota foi {menor}\n\
+A maior nota foi {maior}\n\
+A media dos alunos foi {round(media)}")
