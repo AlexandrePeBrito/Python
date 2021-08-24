@@ -6,3 +6,11 @@
 #em sua função que todos os caracteres serão devolvidos 
 #em caixa alta ou caixa baixa, independentemente de como
 #foram digitados.
+import random
+def embaralha(palavra):
+    print(palavra)
+    p=random.sample(palavra,len(palavra))
+    print(p)
+
+palavra=input("Informe uma palavra: ")
+embaralha(palavra)

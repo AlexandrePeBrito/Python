@@ -15,3 +15,19 @@
 #Para pagamentos sem atraso, cobrar o valor da prestação.
 #Quando houver atraso, cobrar 3% de multa, mais 0,1%
 #de juros por dia de atraso.
+
+def valorPagamento(valorServ,diasServ):
+    salario=valorServ*diasServ
+    return salario
+
+vetor=[]
+valorServico=1
+
+while(valorServico!=0):
+    valorServico=float(input("Informe o valor pelo dia trabalhado: "))
+    diasServico=float(input("Informe quantos dias teve de trabalho no mes: "))
+    salario=valorPagamento(valorServico,diasServico)
+    vetor.append(salario)
+
+print(f"O numero de contas pagas no dia foi {len(vetor)}")
+print(f"O valor total das contas pagas no dia foi {sum(vetor)}")
